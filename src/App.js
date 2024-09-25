@@ -4,7 +4,7 @@ import html2canvas from 'html2canvas';
 import './App.css';
 
 function App() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('https://qr.cs-csc.online/');
   const [bgColor, setBgColor] = useState('#ffffff');
   const [bgImage, setBgImage] = useState(null);
   const [qrColor, setQrColor] = useState('#000000');
