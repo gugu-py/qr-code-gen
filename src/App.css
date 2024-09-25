@@ -1,0 +1,127 @@
+body {
+  background-color: #121212;
+  color: #E0E0E0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh; /* Ensure body takes up full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* Center the entire app content and limit max width */
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="color"] {
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  border: 1px solid #4A4A4A;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus, input[type="color"]:focus {
+  border: 1px solid #BB86FC;
+}
+
+#qr-code {
+  background-color: #1E1E1E;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+}
+
+button {
+  background-color: #BB86FC;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #9B68D9;
+}
+
+.color-picker {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #4A4A4A;
+  margin: 10px 5px;
+}
+
+.color-input {
+  display: none; /* Hide the default input */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.color-section, .caption-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center each section horizontally */
+  margin-bottom: 20px; /* Add spacing between sections */
+}
+
+.color-picker-container, .caption-picker-container {
+  display: flex;
+  gap: 10px; /* Space between the color pickers */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center the inputs horizontally */
+  width: 100%;
+  max-width: 400px;
+}
+
+.color-picker, .caption-picker-container input[type="text"] {
+  flex-grow: 1; /* Make the input fields take up equal space */
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  width: 100%; /* Make the input take the full width of the container */
+}
+
+.caption-picker-container input[type="color"] {
+  flex-grow: 0; /* Prevent the color picker from growing too large */
+}
